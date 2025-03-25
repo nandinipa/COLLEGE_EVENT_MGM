@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        
+        
+       <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  
+   function validate()
+    {
+     var a=document.forms[0].elements[0].value;
+      if(a==null || a=="")
+      {
+        document.getElementById("a").innerHTML="<font color=red>Fill event name";
+        return false;
+      }
+      if(!isNaN(a))
+        { 
+	    document.getElementById("a").innerHTML="<font color=red>Fill character value only";
+	     return false;
+
+        } 
+        
+        
+         var b=document.forms[0].elements[1].value;
+      if(b==null || b=="")
+      {
+        document.getElementById("b").innerHTML="<font color=red>Fill event venue";
+        return false;
+      }
+      
+      
+       var c=document.forms[0].elements[2].value;
+      if(c==null || c=="")
+      {
+        document.getElementById("c").innerHTML="<font color=red>Fill Event Start Date";
+        return false;
+      }
+      
+       var d=document.forms[0].elements[3].value;
+      if(d==null || d=="")
+      {
+        document.getElementById("d").innerHTML="<font color=red>Fill Event Due date";
+        return false;
+      }
+      
+      var e=document.forms[0].elements[4].value;
+      if(e==null || e=="")
+      {
+        document.getElementById("e").innerHTML="<font color=red>Fill Event start time";
+        return false;
+      }
+      
+      var f=document.forms[0].elements[5].value;
+      if(f==null || f=="")
+      {
+        document.getElementById("f").innerHTML="<font color=red>Fill Event end time";
+        return false;
+      }
+      
+      var g=document.forms[0].elements[6].value;
+      if(g==null || g=="")
+      {
+        document.getElementById("g").innerHTML="<font color=red>Fill Chief Guest name";
+        return false;
+      }
+      if(!isNaN(g))
+        { 
+	    document.getElementById("g").innerHTML="<font color=red>Fill character value only";
+	     return false;
+
+        } 
+        
+        var h=document.forms[0].elements[7].value;
+      if(h==null || h=="")
+      {
+        document.getElementById("h").innerHTML="<font color=red>Fill Event Fees Amount";
+        return false;
+      }
+      
+      
+      var i=document.forms[0].elements[8].value;
+      if(i==null || i=="")
+      {
+        document.getElementById("i").innerHTML="<font color=red>Fill the description about event";
+        return false;
+      }
+      
+      
+     return true;
+  }
+  	</script>
+         <style>
+      body{
+   		
+   		background-image: url('bgimg17.jpg');
+   		background-size: cover;
+   	}
+   
+      </style>
+        
+    </head>
+    
+    
+    <body>
+        <form action="eventinsert.jsp" method="post" onsubmit="return validate()">
+            <h2><center>Add Event</center></h2>
+            <div class="row">
+            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-4">Event Name</div>
+                <div class="col-lg-4">Event venue</div>
+                <div class="col-lg-2"></div>
+            </div>
+            
+            <div class="row">
+		<div class="col-lg-2"></div>
+		<div class="col-lg-4"><input type="text" name="ename" class="form-control">
+			<p id="a"></p>
+		</div>
+		<div class="col-lg-4"><input type="text" name="evenue" class="form-control">
+			<p id="b"></p></div>
+			<div class="col-lg-2"></div>
+		
+	</div>
+            
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-4">Event Start Date</div>
+                <div class="col-lg-4">Event Due Date</div>
+                <div class="col-lg-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-4"><input type="date" name="esdate" class="form-control"><p id="c"></p></div>
+                
+                <div class="col-lg-4"><input type="date" name="eedate" class="form-control"><p id="d"></p></div>
+                <div class="col-lg-2"></div>
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-4">Event Start Time</div>
+                <div class="col-lg-4">Event End Time</div>
+                <div class="col-lg-2"></div>
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-4"><input type="time" name="estime" class="form-control"><p id="e"></p></div>
+                
+                <div class="col-lg-4"><input type="time" name="eetime" class="form-control"><p id="f"></p></div>
+                <div class="col-lg-2"></div>
+            </div>
+            
+            
+             <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-4">Event's Chief Guest</div>
+                <div class="col-lg-4">Fees for event</div>
+                <div class="col-lg-2"></div>
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-4"><input type="text" name="eguest" class="form-control"><p id="g"></p></div>
+                
+                <div class="col-lg-4"><input type="text" name="efee" class="form-control"><p id="h"></p></div>
+                <div class="col-lg-2"></div>
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">Description</div>
+                <div class="col-lg-2"></div>
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8"><input type="textarea" name="dis" class="form-control"><p id="i"></p></div>
+                
+                
+                <div class="col-lg-2"></div>
+            </div>
+            
+            <div align="center">
+     		<input type="Submit" value="Submit" class="btn btn-primary">
+     &nbsp;&nbsp;&nbsp;&nbsp;	
+     
+     <a href="admindashboard.jsp"  class="btn btn-primary"> Dashboard</a>
+     </div>
+  
+        </form>
+    </body>
+</html>
