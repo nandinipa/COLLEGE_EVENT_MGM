@@ -1,0 +1,19 @@
+<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-4"><font color="lime" size="4px">Payment Type</font><sup><font color="red" size="5px">*</font></sup></div>
+		<div class="col-lg-4"><font color="lime" size="4px">Transition Id</font><sup><font color="red" size="5px">*</font></sup></div>
+		<div class="col-lg-3"><font color="lime" size="4px">Payment</font><sup><font color="red" size="5px">*</font></sup></div>
+	</div>
+<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-4">
+			<select name="txtpayment" class="form-control">
+				<option><font color="lime">UPI</font></option>
+				<option><font color="lime">Gpay</font></option>
+				<option><font color="lime">PhonePe</font></option>
+				<option><font color="lime">Amazon Pay</option>
+			</select>
+		</div>
+		<div class="col-lg-4"><input type="text" name="txtaadhaar" class="form-control"></div>
+		<div class="col-lg-3"><input type="text" name="txtpan" class="form-control"></div>
+	</div>

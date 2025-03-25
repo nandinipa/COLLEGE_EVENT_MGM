@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online College Event managment system</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    
+    function validate()
+    {
+      var a=document.forms[0].elements[0].value;
+      if(a==null || a=="")
+      {
+        document.getElementById("a").innerHTML="<font color=red>Fill E-mail";
+        return false;
+      }
+      var b=document.forms[0].elements[1].value;
+      if(b==null || b=="")
+      {
+        document.getElementById("b").innerHTML="<font color=red>Fill password";
+        return false;
+      }
+      if(b.length<8)
+      {
+
+        document.getElementById("b").innerHTML="<font color=red>Fill Correct password";
+        return false;
+      
+      }
+      return true;
+    }
+    </script>
+</head>
+<style >
+  body{
+    background-image: url('bgimg7.jpg');
+    background-size: cover;
+  }
+</style>
+<body >
+
+
+<div class="container">
+  <h1><center><b><font color="black">Student Login</font></b></center></h1>
+
+  <form action="studentloginvalidate.jsp"onsubmit="return validate()"method="post">
+  <br><br>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-4">
+      <label for="email"><font color="black" size="5px"><b>Email:</b></font></label>
+    </div>
+    </div>
+    
+      <div class="row">
+        <div class="col-lg-1"></div>
+       <div class="col-lg-4">
+          <input type="email" class="form-control" name="email" placeholder="Enter email">
+          <p id="a"></p>
+       </div>
+  </div>
+    </div>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-4">
+      <label for="pwd"><font color="black" size="5px"><b>Password:</b></font></label></div>
+    </div>
+    <div class="row">
+      <div class="col-lg-1"></div>
+      <div class="col-lg-4">
+      <input type="password" class="form-control" name="pwd" placeholder="Enter password">
+      <p id="b"></p>
+
+    </div>
+    </div>
+    </div>
+     <div class="row">
+      <div class="col-lg-1"></div>
+      <div class="col-lg-4">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  &nbsp;&nbsp;&nbsp;&nbsp;  
+  <a href="body.html"  class="btn btn-primary"> Home</a>
+</div>
+
+  </div>
+  </form>
+</div>
+
+</body> 
+</html>

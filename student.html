@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Online College event managemnet system</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  	 function validate()
+    {
+     var a=document.forms[0].elements[0].value;
+      if(a==null || a=="")
+      {
+        document.getElementById("a").innerHTML="<font color=red>Fill Name";
+        return false;
+      }
+      if(!isNaN(a))
+			{
+				document.getElementById("a").innerHTML="<font color=red>Fill character value only";
+				return false;
+
+			} 
+			var c=document.forms[0].elements[2].value;
+			if(c==null || c =="")
+		    {
+                    document.getElementById("c").innerHTML="<font color=red>Fill Roll number";
+                    return false;
+	        }
+	        
+	        if(isNaN(c))
+			{
+				document.getElementById("c").innerHTML="<font color=red>Fill numeric value only";
+				return false;
+
+			}
+
+			var d=document.forms[0].elements[3].value;
+			if(d==null || d =="")
+		    {
+                    document.getElementById("d").innerHTML="<font color=red>Fill Mobile  number";
+                    return false;
+	        }
+	        
+	        if(isNaN(d))
+			{
+				document.getElementById("d").innerHTML="<font color=red>Fill numeric value only";
+				return false;
+
+			}
+			if(d.length<10)
+	        {
+	        	document.getElementById("d").innerHTML="<font color=red>Fill Valid Mobile number";
+                    return false;
+
+	        }  
+	        var e=document.forms[0].elements[4].value;
+	        if(e==null || e =="")
+		    {
+                    document.getElementById("e").innerHTML="<font color=red>Fill Emails";
+                    return false;
+	        } 
+	         var f=document.forms[0].elements[5].value;
+	        if(f==null || f =="")
+		    {
+                    document.getElementById("f").innerHTML="<font color=red>Fill Aadhaar number";
+                    return false;
+	        } 
+	        if(f.length<12)
+	        {
+	        	document.getElementById("f").innerHTML="<font color=red>Fill Valid Aadhaar number";
+                    return false;
+
+	        }  
+	        if(isNaN(f))
+			{
+				document.getElementById("f").innerHTML="<font color=red>Fill numeric value only";
+				return false;
+
+	        }
+
+
+	        var i=document.forms[0].elements[6].value;
+	    //alert(h);
+	    if(i==null || i=="")
+      {
+        document.getElementById("i").innerHTML="<font color=red>Fill addresss";
+        return false;
+      
+      }
+
+
+
+
+
+      var g=document.forms[0].elements[7].value
+      if(g==null || g=="")
+      {
+      	 document.getElementById("g").innerHTML="<font color=red>Fill password";
+        return false;
+      }
+      if(g.length<8)
+			{
+				document.getElementById("g").innerHTML="<font color=red>Password must be have 8 character";
+				return false;
+             }
+             var h=document.forms[0].elements[8].value;
+			if(h==null || h=="")
+			{
+				document.getElementById("h").innerHTML="<font color=red>Fill Confirm Password";
+				return false;
+			}
+			if(h!=g)
+			{
+				document.getElementById("h").innerHTML="<font color=red> Mismatch Password";
+				return false;
+
+			}
+			 return true;
+  }
+  	</script>
+   <style>
+   	body{
+   		
+   		background-image: url('bgimg12.jpg');
+   		background-size: cover;
+   	}
+   
+   </style>
+</head>
+<body>
+	<form action="inputinsert.jsp" method="post" onsubmit="return validate()">
+	<h2><center><font color="white" ><b><u>Student Registration</u></b></font></center></h2>
+	<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-11"><font color="black" size="4px">Full Name</font><sup><font color="red" size="5px">*</font></sup></div>
+	</div>
+	<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-4"><font color="black" size="3px">First name</font></div>
+		<div class="col-lg-4"><font color="black" size="3px">Middle name</font></div>
+		<div class="col-lg-3"><font color="black" size="3px">Last name</font></div>
+	</div>
+	<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-11"><input type="text" name="txtfname" class="form-control">
+         <p id="a"></p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-4"><font color="black"  size="4px">Class</font><sup><font color="red" size="5px">*</font></sup></div>
+		<div class="col-lg-4"><font color="black" size="4px">Roll Number</font><sup><font color="red" size="5px">*</font></sup></div>
+		<div class="col-lg-3"><font color="black" size="4px">Mobile Number</font><sup><font color="red" size="5px">*</font></sup></div>
+	</div>
+	<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-4"><select name="txtclass">
+			<option>BCA-I</option>
+			<option>BCA-II</option>
+			<option>BCA-III</option>
+			<option>BBA-I</option>
+			<option>BBA-II</option>
+			<option>BBA-III</option>
+			<option>Bsc-ECS-I</option>
+			<option>Bsc-ECS-II</option>
+			<option>Bsc-ECS-III</option>
+			
+		</select>
+			<p id="b"></p>
+		</div>
+		<div class="col-lg-4"><input type="text" name="txtrn" class="form-control">
+			<p id="c"></p>
+		</div>
+		<div class="col-lg-3"><input type="number" name="txtmn" class="form-control">
+			<p id="d"></p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-4"><font color="black"  size="4px">Email</font><sup><font color="red" size="5px">*</font></sup></div>
+		<div class="col-lg-4"><font color="black" size="4px">Aadhaar Number</font><sup><font color="red" size="5px">*</font></sup></div>
+		<div class="col-lg-3"><font color="black" size="4px">Address</font><sup><font color="red" size="5px">*</font></sup></div>
+		
+	</div>
+	<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-4"><input type="Email" name="Email" class="form-control">
+			<p id="e"></p>
+		</div>
+		<div class="col-lg-4"><input type="number" name="txtan" class="form-control">
+			<p id="f"></p></div>
+			<div class="col-lg-3"><input type ="textarea" name="txtaddress" class="form-control"></textarea>
+     	<p id="i"></p></div>
+		
+	</div>
+
+
+		<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-4"><font color="black"  size="4px">Set Password</font><sup><font color="red" size="5px">*</font></sup></div>
+		<div class="col-lg-4"><font color="black" size="4px">Confirm Password</font><sup><font color="red" size="5px">*</font></sup></div>
+		<div class="col-lg-3"></div>
+	</div>
+		
+			<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-4"><input type="Set Password" name="setpass" class="form-control">
+			<p id="g"></p>
+		</div>
+		<div class="col-lg-4"><input type="Confirm Password" name="conpass" class="form-control">
+			<p id="h"></p>
+		</div>
+		<div class="col-lg-3"></div>
+</div>
+		
+	<div align="center">
+     		<input type="Submit" value="Submit" class="btn btn-primary">
+     &nbsp;&nbsp;&nbsp;&nbsp;	<a href="body.html"  class="btn btn-primary"> Home</a>
+     </div>
+  
+
+	
+	<br>
+</form>
+</body>
+</html>
